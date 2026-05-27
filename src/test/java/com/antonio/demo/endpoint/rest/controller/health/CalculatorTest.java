@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
+    private CalculatorController calculator;
+
     @BeforeEach
     public void setUp() {
         calculator = new CalculatorController();
@@ -19,12 +21,12 @@ public class CalculatorTest {
     
     @Test
     public void testSubstract () {
-        assertEquals(2.0, calculator.substract(5, 3));
+        assertEquals(2.0, calculator.subtract(5, 3));
     }
     
     @Test
     public void testMultiply () {
-        assertEquals(15, calculator.multiply());
+        assertEquals(15, calculator.multiply(5, 3));
     }
     
     @Test
