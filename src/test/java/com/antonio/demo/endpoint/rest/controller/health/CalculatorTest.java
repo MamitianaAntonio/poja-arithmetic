@@ -35,7 +35,11 @@ public class CalculatorTest {
   }
 
   @Test
-  public void testDivideByZero() {
-    assertThrows(ArithmeticException.class, () -> calculator.divide(5, 0));
+  void divide_byZero_shouldThrowException() {
+    ArithmeticException ex = assertThrows(
+        ArithmeticException.class,
+        () -> calculator.divide(10, 0));
+
+    assertEquals("Division with zero is impossible", ex.getMessage());
   }
 }
